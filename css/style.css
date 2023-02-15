@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	background: #333;
+	display: flex;
+	
+}
+
+main header {
+	width:20%;
+	height: 100%;
+	padding: 10vh 5vw;
+	display: flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+	align-content: center;
+	position: relative;
+	z-index: 3;
+}
+main nav {
+	position: absolute;
+	top:10vh;
+	right:5vw;
+	z-index:3;
+}
+main nav ul{
+	display: flex;
+}
+
+main nav ul li a{
+	font-size: 18px;
+	color: #bbb;
+	margin-right: 30px;
+}
+
+main section {
+	position: relative;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	padding-top: 140px;
+	z-index: 1;
+
+}
+main header h1{
+	font-size :0px;
+	color: #fff;
+	
+}
+
+main header h1 i{
+	font-size: 5vw;
+	margin-bottom: 15px;
+}
+
+main header h1 {
+	font: normal 0.8vw/1 "arial";
+	
+}
+main header address{
+	font: normal 11px/1.2 "arial";
+	color: #888;
+}
+
+main section article{
+	position: relative;
+	flex: 1;
+	padding: 70px 40px 100px;
+	opacity: 0.6;
+	transition: flex 1s, opacity 1s;
+	z-index: 1;
+	cursor: pointer;
+}
+
+main section article::before{
+	content: "";
+	display: block;
+	width: 80%;
+	height: 95%;
+	background: #444;
+	position:absolute;
+	top:0px;
+	left: -200px;
+	opacity: 0;
+	transition: 1s;
+}
+
+main section article .inner{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	position:relative;
+}
+main section article .txt{
+	width: 100%;
+	transition: 0.5s;
+}
